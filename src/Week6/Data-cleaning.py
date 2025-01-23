@@ -1,3 +1,4 @@
+from multiprocessing.reduction import duplicate
 
 ################ Data cleaning the Iris dataset #################
 from sklearn import datasets
@@ -49,3 +50,11 @@ plt.figure(figsize=(8,6))
 iris_corr = iris_df.corr()
 sns.heatmap(iris_corr, annot=True)
 plt.show()
+
+# Check for duplicate data
+duplicate_data = iris_df.duplicated()
+
+# Drop duplicate
+dropped_duplicates = iris_df.drop_duplicates()
+
+print("Duplicate Count: ", duplicate_data.sum())
