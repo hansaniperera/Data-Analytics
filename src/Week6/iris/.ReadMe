@@ -1,0 +1,6 @@
+Task 1:
+Find the null values of the dataset using isnull() function and to calculate the mean of
+null values for separate features mean() function is used
+
+Correlation
+We can calculate the correlation among features using cor() function

@@ -32,7 +32,7 @@ iris_df['class']=iris.target
 iris_df.columns=['sepal_len', 'sepal_wid', 'petal_len', 'petal_wid', 'class']
 #### ===> TASK 1: here - add two more lines of the code to find the number and mean of missing data
 
-missing_values = iris_df.isnull()
+missing_values = iris_df.isnull().sum()
 missing_mean = iris_df.mean()
 print("Missing Values: ", missing_values)
 print("missing_mean: ", missing_mean)
